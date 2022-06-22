@@ -1,0 +1,31 @@
+package Schleifen;
+
+import java.util.Scanner;
+
+public class Dreiecke {
+    public static void main(String[] args) {
+
+        // By Michal Tomczynski ;)
+        int groesseDreieck;
+        Scanner groesse = new Scanner(System.in);
+        System.out.println("Wie groß sollen deine Dreiecke sein");
+        groesseDreieck = groesse.nextInt();
+
+        int anzahlDreiecke;
+        Scanner anzahl = new Scanner(System.in);
+        System.out.println("Wie viele von Dreiecken möchtest du haben");
+        anzahlDreiecke = anzahl.nextInt();
+
+        // for loop um Dreiecke zu bauen:
+        //loops anschachteln um mehrere Dreiceke zu bekommen
+        // 1 loop gibt uns anzahl von dreiecke, 2 und 3 baut uns unsere baum)
+        for (int l = 1; l <= anzahlDreiecke; l++) { //<- anzahl eingeben mit scanner
+            for (int i = 1; i <= groesseDreieck; i++) { // <- größe eingeben mit scanner
+                for (int k = 1; k <= (1 * i - 1); k++) { //
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
